@@ -4,7 +4,7 @@ import { useRecoilState } from "recoil";
 import { filterState, sortState } from "../atoms";
 
 function Search() {
-  const [_, setFilter] = useRecoilState(filterState);
+  const [, setFilter] = useRecoilState(filterState);
   const [sort, setSort] = useRecoilState(sortState);
 
   const handleChange = (event) => {

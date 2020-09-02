@@ -32,15 +32,19 @@ function ViewPosts() {
         ? b[1].created - a[1].created
         : a[1].created - b[1].created
     )
-    .map((data) => (
-      <Post
-        key={data[0]}
-        onDelete={handleDelete}
-        id={data[0]}
-        date={data[1].created.toLocaleString()}
-        {...data[1]}
-      />
-    ));
+    .map((data) => {
+      const id = data[0]
+      const post = data[1]
+      return (
+        <Post
+          key={id}
+          onDelete={handleDelete}
+          id={id}
+          date={post.created.toLocaleString()}
+          {...post}
+        />
+      );
+    });
 }
 
 export default ViewPosts;
