@@ -39,7 +39,7 @@ function App() {
             textAlign="center"
             fontSize="4xl"
           >
-            Post Viewer
+            PostBook
           </Text>
           <CreatePost />
           <Search />
