@@ -37,6 +37,8 @@ function CreatePost() {
       error = "Required";
     } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
       error = "Invalid email address";
+    } else if (value.length > 320) {
+      error = "Email can't be longer than 320 characters";
     }
     return error;
   };
@@ -45,6 +47,8 @@ function CreatePost() {
     let error;
     if (!value) {
       error = "Required";
+    } else if (value.length > 1000) {
+      error = "Message is too long, please keep under 1000 characters";
     }
     return error;
   };
