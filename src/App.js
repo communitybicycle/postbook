@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 import styled from "@emotion/styled";
 import { Box, Text } from "@chakra-ui/core";
 
